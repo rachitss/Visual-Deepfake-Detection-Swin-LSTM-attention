@@ -1,0 +1,13 @@
+.git
+.gitignore
+.env
+env1/
+__pycache__/
+*.pyc
+MTCNN_EXTRACTED/
+*.mp4
+*.avi
+*.mov
+*.mkv
+app/MTCNN_EXTRACTED/
+app/__pycache__/
