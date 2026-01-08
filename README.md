@@ -1,6 +1,6 @@
 # Visual Deepfake Detection with Swin-Tiny + LSTM Attention
 
-A complete deepfake detection workflow built around a hybrid architecture that merges the Swin-Tiny transformer for spatial feature extraction with an LSTM + attention head for temporal reasoning. The project trains on the full DeepFake Detection Challenge (DFDC) dataset, then serves the resulting model through a FastAPI + Streamlit web application.
+A complete deepfake detection workflow built around a hybrid architecture that merges the Swin-Tiny transformer for spatial feature extraction with an LSTM + attention head for temporal sequences. The project trains on the full DeepFake Detection Challenge (DFDC) dataset, then serves the resulting model through a FastAPI + Streamlit web application.
 
 ## Highlights
 - **Novel architecture**: $\text{SwinTiny} \rightarrow \text{LSTM} \rightarrow \text{Attention} \rightarrow \text{Classifier}$ keeps global spatial context while summarizing long-range temporal dynamics.
@@ -106,5 +106,6 @@ Once the model is trained (copy `model.pth` into `Web-App/app/`), you can expose
 - Replace every placeholder such as `<dataset-path>`, `<output-path>`, `<path-to-train-test-split>`, `<path-to-save-model>`, and `<path-to-saved-results>` with valid absolute paths before execution.
 - Ensure ffmpeg is installed (system package on Linux, binary on Windows) for both compression and face extraction scripts.
 - Keep `model.pth` synchronized between the training outputs and the `Web-App/app/` folder used for inference.
+
 
 
