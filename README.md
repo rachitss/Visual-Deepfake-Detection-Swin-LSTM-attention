@@ -29,7 +29,7 @@ Follow the scripts in this order for a smooth DFDC run:
    - Saves uniformly sampled frames (default 32) per video and tracks progress via `mtcnn_completed_folders.json` so you can resume large jobs.
 
 2. **Dataset preprocessing** – [Training-and-Evaluation/preprocess_data.py](Training-and-Evaluation/preprocess_data.py)
-   - Consumes DFDC `metadata.csv`, filters clips with ≥5 high-quality faces, encodes labels (`REAL=0`, `FAKE=1`), and writes a stratified `train_test_split.npz`.
+   - Consumes DFDC `metadata.csv`, filters clips with ≥5 faces, encodes labels (`REAL=0`, `FAKE=1`), and writes a stratified `train_test_split.npz`.
 
 3. **Optional dataset checks**
    - Inspect the split stats with [Training-and-Evaluation/check_data.py](Training-and-Evaluation/check_data.py).
@@ -106,6 +106,7 @@ Once the model is trained (copy `model.pth` into `Web-App/app/`), you can expose
 - Replace every placeholder such as `<dataset-path>`, `<output-path>`, `<path-to-train-test-split>`, `<path-to-save-model>`, and `<path-to-saved-results>` with valid absolute paths before execution.
 - Ensure ffmpeg is installed (system package on Linux, binary on Windows) for both compression and face extraction scripts.
 - Keep `model.pth` synchronized between the training outputs and the `Web-App/app/` folder used for inference.
+
 
 
 
